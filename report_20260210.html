@@ -7,6 +7,7 @@
         <title>市場掃描報告</title>
         
     <style>
+
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; }
         h2 { text-align: center; color: #40466e; }
         .info-box { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center; }
@@ -16,7 +17,7 @@
         th { background-color: #40466e; color: #ffffff; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; position: sticky; top: 0; }
         tr:hover { background-color: #f1f1f1; cursor: pointer; transition: background-color 0.2s; }
         tr:nth-child(even) { background-color: #f9f9f9; }
-
+        body.modal-open .table-container { pointer-events: none; }
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(2px); }
         .modal-content { background-color: #fff; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 85%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative; animation: slideDown 0.3s ease-out; }
         @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -35,7 +36,7 @@
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-10 21:03 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-10 21:12 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
         <div class='info-box'><strong>🔥 熱門板塊:</strong> 金融 (+3.2%) | 生產製造 (+3.5%) | 交通運輸 (+3.7%) | 醫療科技 (+1.9%) | 加工工業 (+7.0%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
@@ -74,7 +75,7 @@
       <td>[選]2338.HK</td>
       <td>2026-02-10</td>
       <td>29.200001</td>
-      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">50.749325324972595</span></td>
+      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">50.74932512757181</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
       <td>24.032925</td>
       <td>21.499985</td>
@@ -87,7 +88,7 @@
       <td>XLE</td>
       <td>2026-02-09</td>
       <td>53.639999</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">49.239809661907174</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">49.239809566483345</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
       <td>48.580801</td>
       <td>10.413987</td>
@@ -100,7 +101,7 @@
       <td>韓國ETF(KORU)</td>
       <td>2026-02-09</td>
       <td>126.050003</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">49.23744680339712</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">49.23744680339675</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (弱)</span></td>
       <td>109.523043</td>
       <td>15.089939</td>
@@ -113,7 +114,7 @@
       <td>KORU</td>
       <td>2026-02-09</td>
       <td>375.549988</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">47.7691554936792</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">47.769155493699905</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (弱)</span></td>
       <td>269.743489</td>
       <td>39.224858</td>
@@ -126,10 +127,10 @@
       <td>巴西ETF</td>
       <td>2026-02-09</td>
       <td>38.419998</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">39.786586722556976</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">39.78659555227564</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>34.965076</td>
-      <td>9.881066</td>
+      <td>34.965074</td>
+      <td>9.881071</td>
       <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.3%  | 止盈-5.5% | [頂]OBV背離 頭肩底</span></span></td>
       <td>4<1<2<4<13<21</td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
@@ -152,7 +153,7 @@
       <td>AIA</td>
       <td>2026-02-09</td>
       <td>110.580002</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">35.7161767068552</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">35.71617670685403</span></td>
       <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
       <td>105.070891</td>
       <td>5.243233</td>
@@ -178,7 +179,7 @@
       <td>強生</td>
       <td>2026-02-09</td>
       <td>238.639999</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.58161022724927</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.581610230206586</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[減倉] RSI噴出</span></td>
       <td>217.477657</td>
       <td>9.730812</td>
@@ -191,7 +192,7 @@
       <td>微軟</td>
       <td>2026-02-09</td>
       <td>413.600006</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.42736649617623</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.427366500905684</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>534.908766</td>
       <td>-22.678402</td>
@@ -204,7 +205,7 @@
       <td>WMT</td>
       <td>2026-02-09</td>
       <td>129.020004</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">32.01162077439337</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">32.01162077432988</span></td>
       <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
       <td>119.175051</td>
       <td>8.260918</td>
@@ -307,12 +308,12 @@
       <td>^VIX</td>
       <td>^VIX</td>
       <td>2026-02-10</td>
-      <td>17.590000</td>
+      <td>17.670000</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.94337714027776</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>28.352118</td>
-      <td>-37.958779</td>
-      <td><span style="color:#800080;">| 止盈-8.3%</span></td>
+      <td>-37.676613</td>
+      <td><span style="color:#800080;">| 止盈-8.8%</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<3<3<3<5<3</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
@@ -360,7 +361,7 @@
       <td>蘋果</td>
       <td>2026-02-09</td>
       <td>274.619995</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">25.56381445484661</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">25.563813694920185</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>284.254114</td>
       <td>-3.389263</td>
@@ -399,10 +400,10 @@
       <td>GOOG</td>
       <td>2026-02-09</td>
       <td>324.399994</td>
-      <td><span style="color:#666;">24.19407168397472</span></td>
+      <td><span style="color:#666;">24.194071683363898</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (背離)</span></td>
       <td>327.456788</td>
-      <td>-0.933496</td>
+      <td>-0.933495</td>
       <td><span style="color:red; font-weight:bold;"><span style="color:#800080;">[險] 假突破崩跌(328.46)  | 止盈-1.4% | [底]OBV背離</span></span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-8<-6<-2<0<11<13</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
@@ -412,7 +413,7 @@
       <td>ITA</td>
       <td>2026-02-09</td>
       <td>234.839996</td>
-      <td><span style="color:#666;">23.832969849792732</span></td>
+      <td><span style="color:#666;">23.832969849916843</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>232.714575</td>
       <td>0.913317</td>
@@ -425,7 +426,7 @@
       <td>GDX</td>
       <td>2026-02-09</td>
       <td>102.889999</td>
-      <td><span style="color:#666;">23.78130420396721</span></td>
+      <td><span style="color:#666;">23.78130420396752</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>97.887383</td>
       <td>5.110583</td>
@@ -451,9 +452,9 @@
       <td>META</td>
       <td>2026-02-09</td>
       <td>677.219971</td>
-      <td><span style="color:#666;">23.109442124310792</span></td>
+      <td><span style="color:#666;">23.109442302502462</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>753.517357</td>
+      <td>753.517356</td>
       <td>-10.125498</td>
       <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.4%  | 止盈-0.2% | 頭肩底</span></span></td>
       <td>1<0<-2<-4<2<10</td>
@@ -490,7 +491,7 @@
       <td>台積電</td>
       <td>2026-02-09</td>
       <td>355.410004</td>
-      <td><span style="color:#666;">21.932156851494195</span></td>
+      <td><span style="color:#666;">21.932156851494092</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>331.162857</td>
       <td>7.321819</td>
@@ -529,7 +530,7 @@
       <td>半導體SOXL</td>
       <td>2026-02-09</td>
       <td>406.649994</td>
-      <td><span style="color:#666;">17.22208221303593</span></td>
+      <td><span style="color:#666;">17.222082213035932</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>391.356578</td>
       <td>3.907796</td>
@@ -555,7 +556,7 @@
       <td>納指100(TQQQ)</td>
       <td>2026-02-09</td>
       <td>614.320007</td>
-      <td><span style="color:#666;">15.525258756848254</span></td>
+      <td><span style="color:#666;">15.52525875684174</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>632.813052</td>
       <td>-2.922355</td>
@@ -568,9 +569,9 @@
       <td>道瓊斯(UDOW)</td>
       <td>2026-02-09</td>
       <td>501.220001</td>
-      <td><span style="color:#666;">13.934968710439051</span></td>
+      <td><span style="color:#666;">13.934970690185231</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>490.253084</td>
+      <td>490.253085</td>
       <td>2.236991</td>
       <td><span style="color:#800080;">| 止盈-3.4%</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<11<4<9<10<10</span></td>
@@ -581,7 +582,7 @@
       <td>英偉達</td>
       <td>2026-02-09</td>
       <td>190.039993</td>
-      <td><span style="color:#666;">13.365108674363182</span></td>
+      <td><span style="color:#666;">13.365108674353264</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>205.130757</td>
       <td>-7.356656</td>
@@ -594,7 +595,7 @@
       <td>SPXL</td>
       <td>2026-02-09</td>
       <td>228.970001</td>
-      <td><span style="color:#666;">12.905186373367355</span></td>
+      <td><span style="color:#666;">12.905186373002678</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>231.257680</td>
       <td>-0.989234</td>
@@ -607,7 +608,7 @@
       <td>標普500(SPXL)</td>
       <td>2026-02-09</td>
       <td>693.950012</td>
-      <td><span style="color:#666;">11.853047227729421</span></td>
+      <td><span style="color:#666;">11.853047236367072</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>691.113696</td>
       <td>0.410398</td>
@@ -620,7 +621,7 @@
       <td>醫療ETF</td>
       <td>2026-02-09</td>
       <td>156.320007</td>
-      <td><span style="color:#666;">10.768932436306082</span></td>
+      <td><span style="color:#666;">10.768932644844963</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>157.749925</td>
       <td>-0.906446</td>
@@ -633,7 +634,7 @@
       <td>FXI</td>
       <td>2026-02-09</td>
       <td>39.400002</td>
-      <td><span style="color:#666;">9.53143463902926</span></td>
+      <td><span style="color:#666;">9.531434644214826</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>41.039345</td>
       <td>-3.994566</td>
@@ -708,14 +709,6 @@
 
 
         function handleRowClick(row, event) {
-        
-          const modal = document.getElementById("detailModal");
-          if (modal && modal.style.display === "block") {
-            // 彈窗開緊：只容許你先關窗，唔開新窗
-            event.preventDefault();
-            event.stopPropagation();
-            return;
-          }
             const cells = row.getElementsByTagName("td");
             if (cells.length === 0) return;
 
@@ -738,19 +731,26 @@
             document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
             document.getElementById("modalBody").innerHTML = contentHtml;
             document.getElementById("detailModal").style.display = "block";
+            document.body.classList.add("modal-open");
+            
         }
 
-        function closeModal() { document.getElementById("detailModal").style.display = "none"; }
-        const modal = document.getElementById('detailModal');
+        function closeModal() {
+            document.getElementById("detailModal").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
         const modalContent = modal.querySelector('.modal-content');
         
-        function closeModal() {
-          modal.style.display = "none";
-        }
+
         
         // 點遮罩層本體先關（點內容唔關）
-        modal.addEventListener('click', (e) => {
-          if (e.target === e.currentTarget) closeModal();
+        const modal = document.getElementById("detailModal");
+        modal.addEventListener("click", (e) => {
+          if (e.target === e.currentTarget) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeModal();
+          }
         });
         
         // iOS/Android 更穩：加 pointerdown（可選）
