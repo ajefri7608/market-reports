@@ -17,7 +17,7 @@
         tr:hover { background-color: #f1f1f1; cursor: pointer; transition: background-color 0.2s; }
         tr:nth-child(even) { background-color: #f9f9f9; }
 
-        .modal { display: none; cursor: pointer; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(2px); }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5); backdrop-filter: blur(2px); }
         .modal-content { background-color: #fff; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 85%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative; animation: slideDown 0.3s ease-out; }
         @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
         .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; line-height: 1; }
@@ -35,7 +35,7 @@
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-11 13:17 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-11 13:22 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
         <div class='info-box'><strong>🔥 熱門板塊:</strong> 耐用消費品 (+5.1%) | 金融 (+2.8%) | 消費服務 (+3.3%) | 醫療科技 (+4.1%) | 生產製造 (+5.2%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
@@ -93,7 +93,7 @@
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>0669.HK</td>
-      <td>[熱]0669.HK</td>
+      <td>[選]0669.HK</td>
       <td>120.8</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">48.4</span></td>
       <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
@@ -142,12 +142,12 @@
     <tr onclick="handleRowClick(this, event)">
       <td>0005.HK</td>
       <td>匯豐</td>
-      <td>139.7</td>
+      <td>139.6</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">38.1</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>128.0</td>
-      <td>9.2</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-4.5% | 量價背離</span></td>
+      <td>9.1</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-4.4% | 量價背離</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<7<7<4<16<12</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
     </tr>
@@ -735,31 +735,7 @@
         }
 
         function closeModal() { document.getElementById("detailModal").style.display = "none"; }
-        
-        // --- 修正開始: 支援 App Browser 的背景點擊關閉 ---
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById("detailModal");
-            
-            const handleClose = function(e) {
-                // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
-                if (e.target === modal) {
-                    // 如果是觸控結束事件，阻止默認行為以防觸發穿透點擊
-                    if (e.type === 'touchend') {
-                        e.preventDefault(); 
-                    }
-                    closeModal();
-                }
-            };
-
-            // 確保 modal 存在再綁定
-            if (modal) {
-                window.onclick = handleClose;
-                // 改用 addEventListener 以確保相容性，並綁定在 window 上
-                window.addEventListener('touchend', handleClose, { passive: false });
-            }
-        });
-        // --- 修正結束 ---
-
+        window.onclick = function(e) { if (e.target == document.getElementById("detailModal")) closeModal(); }
 
         function filterTable() {
             const input = document.getElementById("searchInput");
