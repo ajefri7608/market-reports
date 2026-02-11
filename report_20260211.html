@@ -35,9 +35,9 @@
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-11 18:17 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-11 21:50 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
-        <div class='info-box'><strong>🔥 熱門板塊:</strong> 耐用消費品 (+5.1%) | 金融 (+2.8%) | 消費服務 (+3.3%) | 醫療科技 (+4.1%) | 生產製造 (+5.2%)</div>
+        <div class='info-box'><strong>🔥 熱門板塊:</strong> 耐用消費品 (+5.1%) | 金融 (+2.8%) | 消費服務 (+3.3%) | 生產製造 (+4.9%) | 醫療科技 (+4.1%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
         <div class="table-container"><table border="1" class="dataframe stock-table" id="stockTable">
   <thead>
@@ -334,13 +334,13 @@
     <tr onclick="handleRowClick(this, event)">
       <td>^VIX</td>
       <td>^VIX</td>
-      <td>18.1</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.6</span></td>
+      <td>17.1</td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.7</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>28.3</td>
-      <td>-36.2</td>
-      <td><span style="color:#800080;">| 止盈-9.0%</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<5<3<3<5<3</span></td>
+      <td>-39.6</td>
+      <td><span style="color:#800080;">| 止盈-5.0%</span></td>
+      <td>3<5<3<3<5<3</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
@@ -721,6 +721,40 @@
         }
 
 
+
+        function embedTVChart(containerId, rawTicker) {
+            var container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = "";
+            var tvTicker = getTvTicker(rawTicker);
+
+            var script = document.createElement("script");
+            script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
+            script.type = "text/javascript";
+            script.async = true;
+            script.innerHTML = JSON.stringify({
+                "symbols": [[tvTicker, tvTicker]],
+                "chartOnly": true,
+                "width": "100%",
+                "height": "100%",
+                "locale": "zh_TW",
+                "colorTheme": "light",
+                "autosize": true,
+                "showVolume": false,
+                "hideDateRanges": true,
+                "scalePosition": "no",
+                "scaleMode": "Normal",
+                "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                "noTimeScale": true,
+                "valuesTracking": "1",
+                "changeMode": "price-and-percent",
+                "chartType": "candlestick",
+                "downColor": "#f33",
+                "upColor": "#339"
+            });
+            container.appendChild(script);
+        }
+
         function handleRowClick(row, event) {
             const cells = row.getElementsByTagName("td");
             if (cells.length === 0) return;
@@ -734,6 +768,10 @@
                 contentHtml += `<div class="detail-row"><span class="detail-label">${headers[i].innerText}</span><span class="detail-value">${cells[i].innerHTML}</span></div>`;
             }
 
+
+            // 插入 TradingView 圖表容器 (60vw x 100px)
+            contentHtml += `<div id="tv-chart-container" style="width: 60vw; max-width: 100%; height: 100px; margin: 10px auto; overflow: hidden;"></div>`;
+
             // 彈窗中的按鈕也要轉換
             contentHtml += `<div style="margin-top:20px; text-align:center;">
                 <button onclick="openTradingView('${ticker}')" style="background:#40466e; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;">
@@ -744,14 +782,17 @@
             document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
             document.getElementById("modalBody").innerHTML = contentHtml;
             document.getElementById("detailModal").style.display = "block";
+            // 渲染圖表
+            setTimeout(function() { embedTVChart("tv-chart-container", ticker); }, 100);
+
         }
 
         function closeModal() { document.getElementById("detailModal").style.display = "none"; }
-        
+
         // --- 修正開始: 支援 App Browser 的背景點擊關閉 ---
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById("detailModal");
-            
+
             const handleClose = function(e) {
                 // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
                 if (e.target === modal) {
