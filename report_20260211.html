@@ -35,7 +35,7 @@
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-11 12:52 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-11 12:55 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
         <div class='info-box'><strong>🔥 熱門板塊:</strong> 耐用消費品 (+5.1%) | 金融 (+2.8%) | 消費服務 (+3.3%) | 醫療科技 (+4.1%) | 生產製造 (+5.2%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
@@ -737,22 +737,27 @@
         function closeModal() { document.getElementById("detailModal").style.display = "none"; }
         
         // --- 修正開始: 支援 App Browser 的背景點擊關閉 ---
-        const modal = document.getElementById("detailModal");
-        
-        const handleClose = function(e) {
-            // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
-            if (e.target === modal) {
-                // 如果是觸控結束事件，阻止默認行為以防觸發穿透點擊 (Ghost Click)
-                if (e.type === 'touchend') {
-                    e.preventDefault(); 
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById("detailModal");
+            
+            const handleClose = function(e) {
+                // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
+                if (e.target === modal) {
+                    // 如果是觸控結束事件，阻止默認行為以防觸發穿透點擊
+                    if (e.type === 'touchend') {
+                        e.preventDefault(); 
+                    }
+                    closeModal();
                 }
-                closeModal();
-            }
-        };
+            };
 
-        // 同時監聽滑鼠點擊與手指觸控結束
-        window.onclick = handleClose;
-        window.ontouchend = handleClose;
+            // 確保 modal 存在再綁定
+            if (modal) {
+                window.onclick = handleClose;
+                // 改用 addEventListener 以確保相容性，並綁定在 window 上
+                window.addEventListener('touchend', handleClose, { passive: false });
+            }
+        });
         // --- 修正結束 ---
 
 
