@@ -29,16 +29,15 @@
         .detail-value { font-weight: 500; color: #222; }
 
         .search-box { margin-bottom: 15px; width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-    th:last-child, td:last-child { display: none; }
-</style>
+    </style>
     
     </head>
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-11 23:34 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-11 23:43 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
-        <div class='info-box'><strong>🔥 熱門板塊:</strong> 金融 (+2.8%) | 消費服務 (+2.5%) | 生產製造 (+5.5%) | 醫療科技 (+2.1%) | 加工工業 (+8.7%)</div>
+        <div class='info-box'><strong>🔥 熱門板塊:</strong> 金融 (+2.7%) | 消費服務 (+2.5%) | 生產製造 (+5.3%) | 醫療科技 (+2.1%) | 加工工業 (+8.9%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
         <div class="table-container"><table border="1" class="dataframe stock-table" id="stockTable">
   <thead>
@@ -53,22 +52,20 @@
       <th>備註</th>
       <th>動能分數</th>
       <th>RS狀態</th>
-      <th>chart_img</th>
     </tr>
   </thead>
   <tbody>
     <tr onclick="handleRowClick(this, event)">
       <td>SNDK</td>
       <td>記憶體製造商</td>
-      <td>541.6</td>
-      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">56.6</span></td>
+      <td>587.0</td>
+      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">55.1</span></td>
       <td><span style="background:#e6e6fa; color:#4b0082; font-weight:bold; padding:3px 6px; border-radius:4px;">[止盈] 高位鎖利</span></td>
-      <td>438.0</td>
-      <td>23.7</td>
-      <td><span style="color:#800080;">| 已破止盈 | 動能減弱</span></td>
-      <td>2<5<11<10<18<11</td>
+      <td>448.2</td>
+      <td>31.0</td>
+      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +8.4% | 射擊之星  | 止盈-3.5% | 動能減弱</span></span></td>
+      <td>3<2<5<11<12<13</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>XLE</td>
@@ -77,37 +74,34 @@
       <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">51.7</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
       <td>49.0</td>
-      <td>11.4</td>
-      <td><span style="color:#800080;">| 止盈-5.2% | 量價背離 [頂]OBV背離</span></td>
+      <td>11.5</td>
+      <td><span style="color:#800080;">| 止盈-5.3% | 量價背離 [頂]OBV背離</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">15<10<10<14<14<9</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>EWY</td>
       <td>韓國ETF(KORU)</td>
-      <td>126.8</td>
+      <td>127.1</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">48.3</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (背離)</span></td>
       <td>110.8</td>
-      <td>14.5</td>
-      <td><span style="color:#800080;">| 止盈-6.5% | 量價背離 [頂]OBV背離 量能轉弱 動能減弱</span></td>
+      <td>14.8</td>
+      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.2%  | 止盈-6.8% | 量價背離 [頂]OBV背離 量能轉弱 動能減弱</span></span></td>
       <td>4<1<-4<-7<-1<1</td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>EWZ</td>
       <td>巴西ETF</td>
-      <td>38.8</td>
+      <td>38.9</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">41.3</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>35.3</td>
-      <td>10.2</td>
-      <td><span style="color:#800080;">| 止盈-5.4% | 量價背離 [頂]OBV背離</span></td>
+      <td>10.4</td>
+      <td><span style="color:#800080;">| 止盈-5.6% | 量價背離 [頂]OBV背離</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<6<4<1<4<13</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>1888.HK</td>
@@ -120,20 +114,18 @@
       <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價量漲 +11.5%  | 止盈-10.9%</span></span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">15<12<8<2<6<6</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td>data:image/png;base64,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</td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>KO</td>
       <td>可口可樂</td>
       <td>78.1</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">38.7</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">38.8</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>74.2</td>
-      <td>5.2</td>
+      <td>5.3</td>
       <td><span style="color:#800080;">| 止盈-3.5% | 頭肩底</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">13<15<21<28<22<16</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>0005.HK</td>
@@ -145,125 +137,115 @@
       <td>9.3</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-4.6% | 量價背離</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<7<7<4<16<12</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td>data:image/png;base64,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</td>
+      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>MU</td>
       <td>美光科技</td>
-      <td>390.2</td>
+      <td>393.3</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">37.7</span></td>
       <td><span style="background:#e6e6fa; color:#4b0082; font-weight:bold; padding:3px 6px; border-radius:4px;">[止盈] 高位鎖利</span></td>
       <td>354.1</td>
-      <td>10.2</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +4.5%  | 止盈-3.1%</span></span></td>
+      <td>11.1</td>
+      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +5.4%  | 止盈-3.8%</span></span></td>
       <td>2<-2<-5<1<4<16</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>JNJ</td>
       <td>強生</td>
-      <td>240.2</td>
+      <td>240.0</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.6</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[減倉] RSI噴出</span></td>
       <td>219.1</td>
-      <td>9.6</td>
-      <td><span style="color:#800080;">吊頸(頂)  | 止盈-4.3% | 量價背離 [頂]OBV背離</span></td>
+      <td>9.5</td>
+      <td><span style="color:#800080;">| 止盈-4.2% | 量價背離 [頂]OBV背離</span></td>
       <td>4<3<3<7<7<7</td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
+      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>HOOD</td>
       <td>HOOD</td>
-      <td>75.2</td>
+      <td>75.3</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.2</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>146.2</td>
-      <td>-48.6</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
+      <td>-48.5</td>
+      <td><span style="color:#800080;">| 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-6<-8<-10<-15<-19<-12</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>GLD</td>
       <td>GLD</td>
-      <td>464.2</td>
+      <td>464.0</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.0</span></td>
       <td><span style="background:#e6e6fa; color:#4b0082; font-weight:bold; padding:3px 6px; border-radius:4px;">[止盈] 破ATR線</span></td>
       <td>446.5</td>
-      <td>4.0</td>
+      <td>3.9</td>
       <td><span style="color:#800080;">| 已破止盈</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">10<5<3<4<7<7</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>AIA</td>
       <td>AIA</td>
-      <td>111.6</td>
+      <td>111.8</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">35.8</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>105.6</td>
-      <td>5.7</td>
-      <td><span style="color:#800080;">| 止盈-3.8% | 量能轉弱</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">10<10<6<3<2<4</span></td>
+      <td>5.8</td>
+      <td><span style="color:#800080;">| 止盈-3.9% | 量價背離 [頂]OBV背離 量能轉弱</span></td>
+      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">8<10<6<3<2<4</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>MSFT</td>
       <td>微軟</td>
-      <td>405.2</td>
+      <td>404.7</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.3</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>532.0</td>
-      <td>-23.8</td>
+      <td>-23.9</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-6<-6<-8<-11<-9<-3</span></td>
+      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-7<-6<-8<-11<-9<-3</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>IBIT</td>
       <td>比特幣</td>
-      <td>37.6</td>
+      <td>37.8</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.7</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>64.2</td>
-      <td>-41.5</td>
+      <td>-41.2</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-8<-11<-9<-12<-13<-7</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>WMT</td>
       <td>WMT</td>
-      <td>128.0</td>
+      <td>127.9</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.6</span></td>
       <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
       <td>120.1</td>
-      <td>6.6</td>
-      <td><span style="color:#800080;">| 止盈-3.5% | 高檔孕線 頭肩底</span></td>
+      <td>6.5</td>
+      <td><span style="color:#800080;">| 止盈-3.4% | 高檔孕線 頭肩底</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<8<10<16<18<15</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>LITE</td>
       <td>光通信</td>
-      <td>548.1</td>
+      <td>556.3</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.0</span></td>
       <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
       <td>404.1</td>
-      <td>35.6</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span> | 陰包陽(頂)  | 止盈-14.3%</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">15<17<21<21<19<13</span></td>
+      <td>37.7</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-15.6%</span></td>
+      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">17<17<21<21<19<13</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>3153.HK</td>
@@ -276,46 +258,42 @@
       <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價量漲 +2.0%  | 止盈-5.3% | [頂]OBV背離</span></span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">20<14<12<5<1<2</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td>data:image/png;base64,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</td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>PLTR</td>
       <td>PLTR</td>
-      <td>133.9</td>
+      <td>133.8</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">30.0</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>202.4</td>
-      <td>-33.8</td>
+      <td>-33.9</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-1<-2<-5<-7<-6</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>NFLX</td>
       <td>NFLX</td>
-      <td>80.2</td>
+      <td>80.1</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">29.5</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>120.0</td>
-      <td>-33.2</td>
+      <td>-33.3</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈 | [底]OBV背離</span></td>
       <td>-1<0<0<1<1<3</td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SOFI</td>
       <td>SOFI</td>
-      <td>20.2</td>
+      <td>20.3</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">29.1</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>31.9</td>
-      <td>-36.6</td>
+      <td>-36.3</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-10<-12<-14<-17<-19<-13</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SLV</td>
@@ -324,115 +302,106 @@
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">28.1</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>82.3</td>
-      <td>-8.4</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.6%  | 已破止盈</span></span></td>
+      <td>-8.5</td>
+      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.5%  | 已破止盈</span></span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<4<5<2<8<10</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
+    </tr>
+    <tr onclick="handleRowClick(this, event)">
+      <td>^VIX</td>
+      <td>^VIX</td>
+      <td>18.7</td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.9</span></td>
+      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
+      <td>28.3</td>
+      <td>-34.0</td>
+      <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +5.1% | 洗盤:前低(16.97)  | 止盈-14.1%</span></span></span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<5<3<3<5<3</span></td>
+      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>RKLB</td>
       <td>RKLB</td>
-      <td>67.0</td>
+      <td>68.2</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.7</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>88.0</td>
-      <td>-23.8</td>
+      <td>-22.6</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-5<-1<-1<0<3</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>^VIX</td>
-      <td>^VIX</td>
-      <td>18.5</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>28.3</td>
-      <td>-34.8</td>
-      <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +3.8% | 洗盤:前低(16.97)  | 止盈-12.5%</span></span></span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<5<3<3<5<3</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>GOOG</td>
       <td>GOOG</td>
-      <td>312.4</td>
+      <td>312.8</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">25.9</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>329.0</td>
-      <td>-5.1</td>
+      <td>-4.9</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-10<-8<-8<-6<0<11</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>AAPL</td>
       <td>蘋果</td>
-      <td>278.7</td>
+      <td>278.1</td>
       <td><span style="color:#666;">24.8</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>284.5</td>
-      <td>-2.0</td>
-      <td><span style="color:#800080;">| 止盈-5.5% | 量價背離 [頂]OBV背離</span></td>
+      <td>-2.3</td>
+      <td><span style="color:#800080;">| 止盈-5.3% | 量價背離 [頂]OBV背離</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<8<9<11<12<11</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
+      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>TSLA</td>
       <td>特斯拉</td>
-      <td>421.3</td>
+      <td>423.1</td>
       <td><span style="color:#666;">24.8</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>489.7</td>
-      <td>-14.0</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-3.4%</span></td>
+      <td>-13.6</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-3.9%</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-3<-2<-5<-4<0</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>TSM</td>
       <td>台積電</td>
-      <td>371.1</td>
+      <td>374.2</td>
       <td><span style="color:#666;">24.7</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>334.0</td>
-      <td>11.1</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.5%  | 止盈-7.6% | 量價背離</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">8<7<7<6<0<8</span></td>
+      <td>12.0</td>
+      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +3.4%  | 止盈-8.4% | 量價背離</span></span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<7<7<6<0<8</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>USO</td>
       <td>原油ETF(UCO)</td>
-      <td>78.8</td>
+      <td>78.7</td>
       <td><span style="color:#666;">24.6</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>77.5</td>
-      <td>1.6</td>
-      <td><span style="color:#800080;">| 止盈-5.7% | 量價背離 [頂]OBV背離</span></td>
+      <td>1.5</td>
+      <td><span style="color:#800080;">| 止盈-5.6%</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">13<9<10<10<10<4</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>ONDS</td>
       <td>ONDS</td>
-      <td>9.0</td>
+      <td>9.2</td>
       <td><span style="color:#666;">23.9</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>13.6</td>
-      <td>-33.5</td>
+      <td>-32.3</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-5<-1<-1<0<5</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>3033.HK</td>
@@ -445,33 +414,30 @@
       <td><span style="color:#800080;">| 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-6<-8<-11<-13<-8<0</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td>data:image/png;base64,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</td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>GDX</td>
       <td>GDX</td>
-      <td>102.6</td>
+      <td>103.1</td>
       <td><span style="color:#666;">22.6</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>99.0</td>
-      <td>3.7</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-3.6%</span></td>
+      <td>4.2</td>
+      <td><span style="color:#800080;">| 止盈-4.1%</span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<8<5<0<3<3</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>INTC</td>
       <td>INTC</td>
-      <td>47.0</td>
+      <td>47.6</td>
       <td><span style="color:#666;">21.5</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
+      <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>48.4</td>
-      <td>-2.8</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-4.5%</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<3<4<7<7<6</span></td>
+      <td>-1.7</td>
+      <td><span style="color:#800080;">| 止盈-5.7%</span></td>
+      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">6<3<4<7<7<6</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>AMZN</td>
@@ -484,33 +450,30 @@
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-14<-13<-16<-17<-12<-4</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>AMD</td>
       <td>超微</td>
-      <td>210.1</td>
+      <td>211.9</td>
       <td><span style="color:#666;">21.5</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>262.6</td>
-      <td>-20.0</td>
+      <td>-19.3</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-2<-5<-5<-5<8</span></td>
+      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-2<-5<-5<-5<8</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>ITA</td>
       <td>ITA</td>
-      <td>230.2</td>
+      <td>230.9</td>
       <td><span style="color:#666;">21.4</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>233.6</td>
-      <td>-1.4</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
+      <td>-1.2</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-0.2%</span></td>
       <td>-1<-2<-1<0<1<5</td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>2359.HK</td>
@@ -523,7 +486,6 @@
       <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價量漲 +2.6% | 洗盤:頂底互換(122.50)  | 止盈-9.5%</span></span></span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">14<11<7<11<4<5</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td>data:image/png;base64,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</td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>2800.HK</td>
@@ -536,12 +498,11 @@
       <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;">洗盤:頂底互換(27.47)  | 止盈-1.9%</span></span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">12<8<5<3<4<5</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td>data:image/png;base64,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</td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>META</td>
       <td>META</td>
-      <td>664.5</td>
+      <td>665.0</td>
       <td><span style="color:#666;">20.6</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>752.8</td>
@@ -549,150 +510,138 @@
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈 | 頭肩底</span></td>
       <td>4<4<1<0<-4<2</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SMCI</td>
       <td>SMCI</td>
-      <td>32.1</td>
+      <td>32.5</td>
       <td><span style="color:#666;">17.6</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>50.0</td>
-      <td>-35.7</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-10.8% | 頭肩底</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<5<3<5<7<4</span></td>
+      <td>-35.0</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-11.8% | 頭肩底</span></td>
+      <td>4<5<3<5<7<4</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>BABA</td>
       <td>BABA</td>
-      <td>162.0</td>
+      <td>162.6</td>
       <td><span style="color:#666;">17.4</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>183.0</td>
-      <td>-11.5</td>
+      <td>-11.2</td>
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td>2<7<4<5<5<8</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SMH</td>
       <td>半導體SOXL</td>
-      <td>408.2</td>
+      <td>411.0</td>
       <td><span style="color:#666;">16.8</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>393.4</td>
-      <td>3.8</td>
-      <td><span style="color:#800080;">| 止盈-6.1%</span></td>
-      <td>3<2<-1<-2<-4<6</td>
+      <td>4.5</td>
+      <td><span style="color:#800080;">| 止盈-6.8%</span></td>
+      <td>4<2<-1<-2<-4<6</td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>QQQ</td>
       <td>納指100(TQQQ)</td>
-      <td>609.4</td>
+      <td>610.5</td>
       <td><span style="color:#666;">15.9</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>633.1</td>
-      <td>-3.7</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-0.4%</span></td>
+      <td>-3.6</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-0.6%</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-6<-7<-10<-10<-10<-1</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>DIA</td>
       <td>道瓊斯(UDOW)</td>
-      <td>500.2</td>
+      <td>499.9</td>
       <td><span style="color:#666;">15.6</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (背離)</span></td>
       <td>491.3</td>
-      <td>1.8</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.5% | 量價背離 [頂]OBV背離</span></td>
+      <td>1.7</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.4% | 量價背離 [頂]OBV背離</span></td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<7<7<11<9<10</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>VT</td>
       <td>全球股票ETF</td>
-      <td>147.3</td>
+      <td>147.5</td>
       <td><span style="color:#666;">15.0</span></td>
       <td><span style="color:#666; font-style:italic;">觀察 (背離)</span></td>
       <td>144.3</td>
-      <td>2.1</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.2% | 量價背離 [頂]OBV背離 量能轉弱</span></td>
+      <td>2.2</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.3% | 量價背離 [頂]OBV背離 量能轉弱</span></td>
       <td>2<1<-3<-2<1<-1</td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>ALAB</td>
       <td>AI中心材料</td>
-      <td>145.8</td>
+      <td>149.4</td>
       <td><span style="color:#666;">14.4</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>211.4</td>
-      <td>-31.1</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
+      <td>-29.4</td>
+      <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;">洗盤:前低(148.51)  | 止盈-2.3%</span></span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-2<5<0<-2<-2</span></td>
       <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>NVDA</td>
       <td>英偉達</td>
-      <td>189.6</td>
+      <td>190.7</td>
       <td><span style="color:#666;">12.7</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>204.4</td>
-      <td>-7.3</td>
-      <td><span style="color:#800080;">| 止盈-7.6%</span></td>
-      <td>-1<-5<-7<-11<-13<-3</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-      <td></td>
+      <td>-6.7</td>
+      <td><span style="color:#800080;">| 止盈-8.1% | 量價背離 [頂]OBV背離</span></td>
+      <td>-2<-5<-7<-11<-13<-3</td>
+      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SPXL</td>
       <td>SPXL</td>
-      <td>225.5</td>
+      <td>226.2</td>
       <td><span style="color:#666;">12.0</span></td>
       <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
       <td>231.5</td>
-      <td>-2.6</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-6.2%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-4<-7<-10<-8<-3</span></td>
+      <td>-2.3</td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-6.5%</span></td>
+      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-4<-7<-10<-8<-3</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>SPY</td>
       <td>標普500(SPXL)</td>
-      <td>690.6</td>
+      <td>691.2</td>
       <td><span style="color:#666;">10.6</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>691.6</td>
       <td>-0.1</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.3% | 量價背離 [頂]OBV背離</span></td>
+      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-2.4% | 量價背離 [頂]OBV背離</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-4<-4<-3<1<2</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>XLV</td>
       <td>醫療ETF</td>
-      <td>155.6</td>
+      <td>155.4</td>
       <td><span style="color:#666;">9.8</span></td>
       <td><span style="color:#666; font-style:italic;">觀察</span></td>
       <td>157.9</td>
-      <td>-1.5</td>
-      <td><span style="color:#800080;">| 止盈-1.6%</span></td>
+      <td>-1.6</td>
+      <td><span style="color:#800080;">| 止盈-1.5%</span></td>
       <td>-2<-3<-3<-4<0<0</td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
     <tr onclick="handleRowClick(this, event)">
       <td>FXI</td>
@@ -705,7 +654,6 @@
       <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-9<-12<-11<-10<-2</span></td>
       <td><span style="color:#999;">弱勢</span></td>
-      <td></td>
     </tr>
   </tbody>
 </table></div>
@@ -718,6 +666,7 @@
         
     <script>
         function getTvTicker(yfTicker) {
+            // === 1. 特殊對照表 (手動維護常用 ETF 與指數) ===
             const mapping = {
                 "QQQ": "NASDAQ:QQQ", "SPY": "AMEX:SPY", "DIA": "AMEX:DIA", "SMH": "NASDAQ:SMH",
                 "IWM": "AMEX:IWM", "VXX": "CBOE:VXX", "UVXY": "CBOE:UVXY", "SQQQ": "NASDAQ:SQQQ",
@@ -726,104 +675,130 @@
                 "EWZ": "AMEX:EWZ", "XLE": "AMEX:XLE", "XLF": "AMEX:XLF", "XLV": "AMEX:XLV",
                 "GDX": "AMEX:GDX", "SLV": "AMEX:SLV", "GLD": "AMEX:GLD", "USO": "AMEX:USO",
                 "IBIT": "NASDAQ:IBIT", "ARKK": "AMEX:ARKK", "TSM": "NYSE:TSM", "UMC": "NYSE:UMC",
-                "^HSI": "HSI:HSI", "^N225": "TVC:NI225", "^GSPC": "SP:SPX", "^IXIC": "TVC:IXIC", "3033.HK": "HKEX:3033"
+                "^HSI": "HSI:HSI", "^N225": "TVC:NI225", "^GSPC": "SP:SPX", "^IXIC": "TVC:IXIC", "3033": "HKEX:3033"
             };
+
             if (mapping[yfTicker]) return mapping[yfTicker];
-            if (yfTicker.endsWith(".HK")) return "HKEX:" + parseInt(yfTicker.replace(".HK", ""), 10);
+
+            // === 2. 規則轉換 ===
+
+            // 港股: 0700.HK -> HKEX:700 (移除前導0)
+            if (yfTicker.endsWith(".HK")) {
+                let code = yfTicker.replace(".HK", "");
+                return "HKEX:" + parseInt(code, 10);
+            }
+
+            // 加密貨幣: BTC-USD -> BINANCE:BTCUSDT
+            if (yfTicker.endsWith("-USD")) {
+                return "BINANCE:" + yfTicker.replace("-USD", "") + "USDT";
+            }
+
+            // 日股: 7203.T -> TSE:7203
+            if (yfTicker.endsWith(".T")) {
+                return "TSE:" + yfTicker.replace(".T", "");
+            }
+
+            // 預設: 直接使用代號 (TradingView 搜尋通常夠聰明)
             return yfTicker;
         }
 
         function openTradingView(yfTicker) {
             const tvTicker = getTvTicker(yfTicker);
+
+            // 偵測是否為行動裝置
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            const link = isMobile ? `tradingview://chart?symbol=${tvTicker}` : `https://www.tradingview.com/chart/?symbol=${tvTicker}`;
-            if(isMobile) window.location.href = link; else window.open(link, '_blank');
+
+            if (isMobile) {
+                // 手機上強制使用 App Scheme
+                // 格式: tradingview://chart?symbol=NASDAQ:NVDA
+                const appLink = `tradingview://chart?symbol=${tvTicker}`;
+                window.location.href = appLink;
+            } else {
+                // 電腦上使用網頁版
+                const webLink = `https://www.tradingview.com/chart/?symbol=${tvTicker}`;
+                window.open(webLink, '_blank');
+            }
         }
 
-        function embedTVChart(containerId, rawTicker) {
-            var container = document.getElementById(containerId);
-            if (!container) return;
-            container.innerHTML = "";
-            var tvTicker = getTvTicker(rawTicker);
-            console.log("Embedding TV Chart for", tvTicker);
-            var script = document.createElement("script");
-            script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
-            script.type = "text/javascript";
-            script.async = true;
-            script.innerHTML = JSON.stringify({
-                "symbols": [[tvTicker, tvTicker]],
-                "chartOnly": true,
-                "width": "100%",
-                "height": "100%",
-                "locale": "zh_TW",
-                "colorTheme": "light",
-                "autosize": true,
-                "showVolume": false,
-                "hideDateRanges": true,
-                "dateRange": "12m",
-                "scalePosition": "no",
-                "scaleMode": "Normal",
-                "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
-                "noTimeScale": true,
-                "valuesTracking": "1",
-                "changeMode": "price-and-percent",
-                "chartType": "candlestick",
-                "downColor": "#f33",
-                "upColor": "#339"
-            });
-            container.appendChild(script);
-        }
 
         function handleRowClick(row, event) {
-            try {
-                const cells = row.getElementsByTagName("td");
-                if (cells.length === 0) return;
+            const cells = row.getElementsByTagName("td");
+            if (cells.length === 0) return;
 
-                const ticker = cells[0].innerText.trim();
-                const isHK = ticker.endsWith(".HK");
+            const ticker = cells[0].innerText.trim(); // 這是 Yahoo 格式
 
-                const headers = document.querySelectorAll("th");
-                let contentHtml = "";
-                let chartImgData = "";
+            // 顯示詳情彈窗
+            const headers = document.querySelectorAll("th");
+            let contentHtml = "";
+            for (let i = 0; i < cells.length; i++) {
+                contentHtml += `<div class="detail-row"><span class="detail-label">${headers[i].innerText}</span><span class="detail-value">${cells[i].innerHTML}</span></div>`;
+            }
 
-                for (let i = 0; i < cells.length; i++) {
-                    const headerText = headers[i].innerText;
-                    if (headerText.includes("chart_img") || headerText === "chart_img") {
-                        chartImgData = cells[i].textContent.trim();
-                        continue;
-                    }
-                    contentHtml += `<div class="detail-row"><span class="detail-label">${headerText}</span><span class="detail-value">${cells[i].innerHTML}</span></div>`;
-                }
+            // 彈窗中的按鈕也要轉換
+            contentHtml += `<div style="margin-top:20px; text-align:center;">
+                <button onclick="openTradingView('${ticker}')" style="background:#40466e; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;">
+                    📈 在 TradingView 查看圖表
+                </button>
+            </div>`;
 
-                if (isHK && chartImgData.length > 20) {
-                     contentHtml += `<div style="text-align:center; margin:10px 0;"><img src="${chartImgData}" style="width:60vw; max-width:100%; height:auto; border:1px solid #eee;"></div>`;
-                } else if (!isHK) {
-                     contentHtml += `<div id="tv-chart-container" style="width: 60vw; max-width: 100%; height: 100px; margin: 10px auto; overflow: hidden;">Loading Chart...</div>`;
-                }
-
-                contentHtml += `<div style="margin-top:20px; text-align:center;"><button onclick="openTradingView('${ticker}')" style="background:#40466e; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;">📈 在 TradingView 查看圖表</button></div>`;
-
-                document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
-                document.getElementById("modalBody").innerHTML = contentHtml;
-                document.getElementById("detailModal").style.display = "block";
-
-                if (!isHK) {
-                    setTimeout(function() { embedTVChart("tv-chart-container", ticker); }, 300);
-                }
-            } catch(e) { console.error(e); }
+            document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
+            document.getElementById("modalBody").innerHTML = contentHtml;
+            document.getElementById("detailModal").style.display = "block";
         }
 
         function closeModal() { document.getElementById("detailModal").style.display = "none"; }
+        
+        // --- 修正開始: 支援 App Browser 的背景點擊關閉 ---
         document.addEventListener('DOMContentLoaded', function() {
-             const modal = document.getElementById("detailModal");
-             if(modal) {
-                 const handleClose = function(e) { if (e.target === modal) { if (e.type === 'touchend') e.preventDefault(); closeModal(); } };
-                 modal.addEventListener('click', handleClose);
-                 modal.addEventListener('touchend', handleClose);
-             }
-        });
-    </script>
+            const modal = document.getElementById("detailModal");
+            
+            const handleClose = function(e) {
+                // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
+                if (e.target === modal) {
+                    // 如果是觸控結束事件，阻止默認行為以防觸發穿透點擊
+                    if (e.type === 'touchend') {
+                        e.preventDefault(); 
+                    }
+                    closeModal();
+                }
+            };
 
+            // 確保 modal 存在再綁定
+            if (modal) {
+                window.onclick = handleClose;
+                // 改用 addEventListener 以確保相容性，並綁定在 window 上
+                window.addEventListener('touchend', handleClose, { passive: false });
+            }
+        });
+        // --- 修正結束 ---
+
+
+        function filterTable() {
+            const input = document.getElementById("searchInput");
+            // 使用 value 屬性並轉大寫，並去除前後空白
+            const filter = input.value.toUpperCase().trim();
+            const table = document.getElementById("stockTable");
+            const tr = table.getElementsByTagName("tr");
+
+            // 使用 requestAnimationFrame 避免在大量資料時卡頓
+            window.requestAnimationFrame(() => {
+                for (let i = 1; i < tr.length; i++) {
+                    // 獲取整行的文字內容 (textContent 效能比 innerText 好)
+                    const textContent = tr[i].textContent || tr[i].innerText;
+
+                    if (filter === "") {
+                        tr[i].style.display = ""; // 搜尋框為空時顯示所有
+                    } else if (textContent.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            });
+        }
+
+    </script>
+    
     </body>
     </html>
     
