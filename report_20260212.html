@@ -36,7 +36,7 @@
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-12 11:31 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-12 11:47 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
         <div class='info-box'><strong>🔥 熱門板塊:</strong> 金融 (+2.7%) | 生產製造 (+6.3%) | 醫療科技 (+1.4%) | 加工工業 (+7.5%) | 公用事業 (+2.0%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
@@ -44,7 +44,6 @@
   <thead>
     <tr style="text-align: right;">
       <th>股票代號</th>
-      <th>chart_img</th>
       <th>股票名稱</th>
       <th>價格</th>
       <th>ADX</th>
@@ -54,12 +53,12 @@
       <th>備註</th>
       <th>動能分數</th>
       <th>RS狀態</th>
+      <th>chart_img</th>
     </tr>
   </thead>
   <tbody>
     <tr onclick="handleRowClick(this, event)">
       <td>LITE</td>
-      <td></td>
       <td>光通信</td>
       <td>574.1</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.0</span></td>
@@ -69,6 +68,7 @@
       <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.3%  | 止盈-18.2% | 量價背離</span></span></td>
       <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">19<17<21<21<19<13</span></td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
+      <td></td>
     </tr>
   </tbody>
 </table></div>
@@ -123,7 +123,7 @@
             script.async = true;
             script.innerHTML = JSON.stringify({
                 "symbols": [[tvTicker, tvTicker]], "chartOnly": true, "width": "100%", "height": "100%", "locale": "zh_TW",
-                "colorTheme": "light", "autosize": true, "showVolume": false, "hideDateRanges": true, "dateRange": "6m",
+                "colorTheme": "light", "autosize": true, "showVolume": false, "hideDateRanges": false, "dateRange": "6m",
                 "interval": "240", "scalePosition": "no", "scaleMode": "Normal", "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
                 "noTimeScale": true, "valuesTracking": "1", "changeMode": "price-and-percent", "chartType": "candlestick",
                 "downColor": "#f33", "upColor": "#339"
