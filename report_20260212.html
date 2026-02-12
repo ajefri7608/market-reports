@@ -29,13 +29,14 @@
         .detail-value { font-weight: 500; color: #222; }
 
         .search-box { margin-bottom: 15px; width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-    </style>
+    th:last-child, td:last-child { display: none; }
+</style>
     
     </head>
     <body>
         <h2>📊 High ROI 市場掃描報告</h2>
         <div class="info-box">
-            時間: 2026-02-12 11:09 | 大盤狀態: <strong>多頭 (Bull)</strong>
+            時間: 2026-02-12 11:27 | 大盤狀態: <strong>多頭 (Bull)</strong>
         </div>
         <div class='info-box'><strong>🔥 熱門板塊:</strong> 金融 (+2.7%) | 生產製造 (+6.3%) | 醫療科技 (+1.4%) | 加工工業 (+7.5%) | 公用事業 (+2.0%)</div>
         <input type="text" id="searchInput" class="search-box" oninput="filterTable()" placeholder="🔍 搜尋代號、名稱或信號...">
@@ -43,6 +44,7 @@
   <thead>
     <tr style="text-align: right;">
       <th>股票代號</th>
+      <th>chart_img</th>
       <th>股票名稱</th>
       <th>價格</th>
       <th>ADX</th>
@@ -56,91 +58,8 @@
   </thead>
   <tbody>
     <tr onclick="handleRowClick(this, event)">
-      <td>SNDK</td>
-      <td>記憶體製造商</td>
-      <td>599.3</td>
-      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">55.2</span></td>
-      <td><span style="background:#e6e6fa; color:#4b0082; font-weight:bold; padding:3px 6px; border-radius:4px;">[止盈] 高位鎖利</span></td>
-      <td>448.2</td>
-      <td>33.7</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +10.7%  | 止盈-5.7% | 動能減弱</span></span></td>
-      <td>2<2<5<11<12<13</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>XLE</td>
-      <td>XLE</td>
-      <td>55.0</td>
-      <td><span style="background:#ffcccc; color:#8b0000; font-weight:bold;">51.8</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
-      <td>49.0</td>
-      <td>12.2</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.6%  | 止盈-5.5%</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">15<10<10<14<14<9</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>EWY</td>
-      <td>韓國ETF(KORU)</td>
-      <td>130.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">48.6</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
-      <td>110.9</td>
-      <td>17.8</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +4.9%  | 止盈-7.9% | [頂]OBV背離 量能轉弱</span></span></td>
-      <td>3<1<-4<-7<-1<1</td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>EWZ</td>
-      <td>巴西ETF</td>
-      <td>39.2</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">41.5</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
-      <td>35.3</td>
-      <td>11.1</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.2%  | 止盈-5.7% | [頂]OBV背離</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">8<6<4<1<4<13</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>KO</td>
-      <td>可口可樂</td>
-      <td>78.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">39.2</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>74.2</td>
-      <td>5.9</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.3%  | 止盈-4.4% | [頂]OBV背離 頭肩底</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">13<15<21<28<22<16</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>MU</td>
-      <td>美光科技</td>
-      <td>410.3</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">37.8</span></td>
-      <td><span style="background:#e6e6fa; color:#4b0082; font-weight:bold; padding:3px 6px; border-radius:4px;">[止盈] 高位鎖利</span></td>
-      <td>354.1</td>
-      <td>15.9</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價量漲 +9.9%  | 止盈-8.0%</span></span></td>
-      <td>3<-2<-5<1<4<16</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>0005.HK</td>
-      <td>匯豐</td>
-      <td>139.0</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">37.3</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>128.4</td>
-      <td>8.2</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-3.8% | 量價背離</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<9<7<7<11<17</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
       <td>JNJ</td>
+      <td></td>
       <td>強生</td>
       <td>240.9</td>
       <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.9</span></td>
@@ -150,486 +69,6 @@
       <td><span style="color:#800080;">| 止盈-4.5% | [頂]OBV背離</span></td>
       <td>4<3<3<7<7<7</td>
       <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>HOOD</td>
-      <td>HOOD</td>
-      <td>78.0</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.2</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>146.2</td>
-      <td>-46.7</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-9<-8<-10<-15<-19<-12</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>GLD</td>
-      <td>GLD</td>
-      <td>467.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.1</span></td>
-      <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
-      <td>446.5</td>
-      <td>4.7</td>
-      <td><span style="color:#800080;">| 止盈-0.6%</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">11<5<3<4<7<7</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>AIA</td>
-      <td>AIA</td>
-      <td>113.4</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">36.0</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
-      <td>105.7</td>
-      <td>7.3</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.3%  | 止盈-5.2% | 量價背離 [頂]OBV背離 量能轉弱</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">9<10<6<3<2<4</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>MSFT</td>
-      <td>微軟</td>
-      <td>404.4</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">34.4</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>532.0</td>
-      <td>-24.0</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-7<-6<-8<-11<-9<-3</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>3153.HK</td>
-      <td>日經225(7262)</td>
-      <td>120.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.8</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:3px 6px; border-radius:4px;">[買入] 領先</span></td>
-      <td>110.4</td>
-      <td>9.3</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-4.8% | 量價背離 [頂]OBV背離 高檔孕線</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">20<20<14<12<1<0</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>WMT</td>
-      <td>WMT</td>
-      <td>128.8</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.7</span></td>
-      <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
-      <td>120.1</td>
-      <td>7.3</td>
-      <td><span style="color:#800080;">| 止盈-4.3% | 頭肩底</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">7<8<10<16<18<15</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>IBIT</td>
-      <td>比特幣</td>
-      <td>38.3</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>64.2</td>
-      <td>-40.4</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span> | 錘頭(底)  | 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-7<-11<-9<-12<-13<-7</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>LITE</td>
-      <td>光通信</td>
-      <td>574.1</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">33.0</span></td>
-      <td><span style="background:#FFA500; color:white; font-weight:bold; padding:3px 6px; border-radius:4px;">[回調買入] 領先</span></td>
-      <td>404.1</td>
-      <td>42.1</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.3%  | 止盈-18.2% | 量價背離</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">19<17<21<21<19<13</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>PLTR</td>
-      <td>PLTR</td>
-      <td>135.7</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">30.0</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>202.4</td>
-      <td>-33.0</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-1<-2<-5<-7<-6</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>NFLX</td>
-      <td>NFLX</td>
-      <td>79.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">29.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>120.0</td>
-      <td>-33.7</td>
-      <td><span style="color:#800080;">| 已破止盈 | [底]OBV背離</span></td>
-      <td>-1<0<0<1<1<3</td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SOFI</td>
-      <td>SOFI</td>
-      <td>20.5</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">29.1</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>31.9</td>
-      <td>-35.6</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-10<-12<-14<-17<-19<-13</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SLV</td>
-      <td>SLV</td>
-      <td>76.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">28.1</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>82.3</td>
-      <td>-6.9</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +4.3% | 錘頭(底)  | 已破止盈</span></span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">6<4<5<2<8<10</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>^VIX</td>
-      <td>^VIX</td>
-      <td>17.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.9</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>28.3</td>
-      <td>-37.7</td>
-      <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;">洗盤:前低(16.97)  | 止盈-9.0%</span></span></td>
-      <td>4<5<3<3<5<3</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>RKLB</td>
-      <td>RKLB</td>
-      <td>69.6</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">27.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>88.0</td>
-      <td>-20.9</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-5<-1<-1<0<3</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>GOOG</td>
-      <td>GOOG</td>
-      <td>311.3</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">26.0</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>329.0</td>
-      <td>-5.4</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-11<-8<-8<-6<0<11</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>AAPL</td>
-      <td>蘋果</td>
-      <td>275.5</td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold;">25.0</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>284.5</td>
-      <td>-3.2</td>
-      <td><span style="color:#800080;">射擊之星  | 止盈-4.5% | [頂]OBV背離</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<8<9<11<12<11</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>TSLA</td>
-      <td>特斯拉</td>
-      <td>428.3</td>
-      <td><span style="color:#666;">24.8</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>489.7</td>
-      <td>-12.5</td>
-      <td><span style="color:#800080;">| 止盈-5.0%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-3<-2<-5<-4<0</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>TSM</td>
-      <td>台積電</td>
-      <td>374.1</td>
-      <td><span style="color:#666;">24.7</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>334.0</td>
-      <td>12.0</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價量漲 +3.4%  | 止盈-8.4%</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">10<7<7<6<0<8</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>USO</td>
-      <td>原油ETF(UCO)</td>
-      <td>78.9</td>
-      <td><span style="color:#666;">24.6</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>77.5</td>
-      <td>1.8</td>
-      <td><span style="color:blue; font-weight:bold;"><span style="color:#800080;">洗盤:頂底互換(78.32)  | 止盈-5.8% | [頂]OBV背離</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">13<9<10<10<10<4</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>ONDS</td>
-      <td>ONDS</td>
-      <td>9.2</td>
-      <td><span style="color:#666;">24.0</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>13.6</td>
-      <td>-32.0</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-5<-1<-1<0<5</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>3033.HK</td>
-      <td>恆科指ETF</td>
-      <td>5.3</td>
-      <td><span style="color:#666;">23.1</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>6.1</td>
-      <td>-13.9</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-7<-8<-11<-13<-8<0</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>GDX</td>
-      <td>GDX</td>
-      <td>106.0</td>
-      <td><span style="color:#666;">22.6</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>99.0</td>
-      <td>7.1</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.9%  | 止盈-6.6%</span></span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">10<8<5<0<3<3</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>AMZN</td>
-      <td>AMZN</td>
-      <td>204.1</td>
-      <td><span style="color:#666;">21.6</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>253.6</td>
-      <td>-19.5</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-15<-13<-16<-17<-12<-4</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>INTC</td>
-      <td>INTC</td>
-      <td>48.3</td>
-      <td><span style="color:#666;">21.5</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>48.4</td>
-      <td>-0.2</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.5%  | 止盈-7.0%</span></span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">5<3<4<7<7<6</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>AMD</td>
-      <td>超微</td>
-      <td>213.6</td>
-      <td><span style="color:#666;">21.5</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>262.6</td>
-      <td>-18.7</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-2<-5<-5<-5<8</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>ITA</td>
-      <td>ITA</td>
-      <td>230.9</td>
-      <td><span style="color:#666;">21.4</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>233.6</td>
-      <td>-1.1</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-0.2%</span></td>
-      <td>-1<-2<-1<0<1<5</td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>2800.HK</td>
-      <td>恆指ETF</td>
-      <td>27.2</td>
-      <td><span style="color:#666;">20.8</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>27.7</td>
-      <td>-1.5</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-1.1%</span></td>
-      <td><span style="background:#FFD700; color:black; font-weight:bold; padding:2px 5px; border-radius:4px;">11<8<5<3<4<5</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>META</td>
-      <td>META</td>
-      <td>668.7</td>
-      <td><span style="color:#666;">20.5</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>752.8</td>
-      <td>-11.2</td>
-      <td><span style="color:#800080;">| 已破止盈 | 頭肩底</span></td>
-      <td>3<4<1<0<-4<2</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>BABA</td>
-      <td>BABA</td>
-      <td>164.3</td>
-      <td><span style="color:#666;">17.4</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>183.0</td>
-      <td>-10.2</td>
-      <td><span style="color:#800080;">| 止盈-0.3%</span></td>
-      <td>3<7<4<5<5<8</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SMCI</td>
-      <td>SMCI</td>
-      <td>32.0</td>
-      <td><span style="color:#666;">17.4</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>50.0</td>
-      <td>-35.9</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-10.8% | 頭肩底</span></td>
-      <td>4<5<3<5<7<4</td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SMH</td>
-      <td>半導體SOXL</td>
-      <td>414.8</td>
-      <td><span style="color:#666;">16.8</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>393.4</td>
-      <td>5.4</td>
-      <td><span style="color:#800080;"><span style="background:#ffe6e6; color:#d60000; font-weight:bold;">價漲 +2.5%  | 止盈-7.6% | 量價背離 [頂]OBV背離 量能轉弱</span></span></td>
-      <td>1<2<-1<-2<-4<6</td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>QQQ</td>
-      <td>納指100(TQQQ)</td>
-      <td>613.1</td>
-      <td><span style="color:#666;">15.9</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>633.1</td>
-      <td>-3.2</td>
-      <td><span style="color:#800080;">| 止盈-1.1%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-7<-7<-10<-10<-10<-1</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>DIA</td>
-      <td>道瓊斯(UDOW)</td>
-      <td>501.3</td>
-      <td><span style="color:#666;">15.4</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察 (背離)</span></td>
-      <td>491.3</td>
-      <td>2.0</td>
-      <td><span style="color:#800080;">| 止盈-2.7% | [頂]OBV背離</span></td>
-      <td><span style="background:#ccffcc; color:#006400; font-weight:bold; padding:2px 5px; border-radius:4px;">6<7<7<11<9<10</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>VT</td>
-      <td>全球股票ETF</td>
-      <td>148.0</td>
-      <td><span style="color:#666;">14.8</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>144.3</td>
-      <td>2.5</td>
-      <td><span style="color:#800080;">| 止盈-2.7% | [頂]OBV背離 量能轉弱</span></td>
-      <td>1<1<-3<-2<1<-1</td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>ALAB</td>
-      <td>AI中心材料</td>
-      <td>143.7</td>
-      <td><span style="color:#666;">14.5</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>211.4</td>
-      <td>-32.0</td>
-      <td><span style="color:#800080;">| 已破止盈</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-5<-2<5<0<-2<-2</span></td>
-      <td><span style="color:#d60000; font-weight:bold;">轉強</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>NVDA</td>
-      <td>英偉達</td>
-      <td>190.1</td>
-      <td><span style="color:#666;">12.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>204.4</td>
-      <td>-7.0</td>
-      <td><span style="color:#800080;">| 止盈-7.8%</span></td>
-      <td>-2<-5<-7<-11<-13<-3</td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SPXL</td>
-      <td>SPXL</td>
-      <td>226.9</td>
-      <td><span style="color:#666;">12.0</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>231.5</td>
-      <td>-2.0</td>
-      <td><span style="color:#800080;"><span style="color:#006400; font-weight:bold;">量縮</span>  | 止盈-6.7%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-4<-7<-10<-8<-3</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>SPY</td>
-      <td>標普500(SPXL)</td>
-      <td>692.0</td>
-      <td><span style="color:#666;">10.6</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>691.6</td>
-      <td>0.1</td>
-      <td><span style="color:#800080;">| 止盈-2.5% | [頂]OBV背離</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-4<-4<-4<-3<1<2</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">創高</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>XLV</td>
-      <td>醫療ETF</td>
-      <td>156.2</td>
-      <td><span style="color:#666;">9.8</span></td>
-      <td><span style="color:#666; font-style:italic;">觀察</span></td>
-      <td>157.9</td>
-      <td>-1.1</td>
-      <td><span style="color:#800080;">| 止盈-2.1%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-3<-3<-3<-4<0<0</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
-    </tr>
-    <tr onclick="handleRowClick(this, event)">
-      <td>FXI</td>
-      <td>中國大盤ETF(YINN)</td>
-      <td>39.5</td>
-      <td><span style="color:#666;">8.7</span></td>
-      <td><span style="background:#ffe6e6; color:#8b0000; font-weight:bold; padding:3px 6px; border-radius:4px;">[賣出] 破紅線</span></td>
-      <td>41.0</td>
-      <td>-3.8</td>
-      <td><span style="color:#800080;">| 止盈-0.4%</span></td>
-      <td><span style="background:#ffe6e6; color:#d60000; font-weight:bold; padding:2px 5px; border-radius:4px;">-6<-9<-12<-11<-10<-2</span></td>
-      <td><span style="color:#999;">弱勢</span></td>
     </tr>
   </tbody>
 </table></div>
@@ -641,140 +80,94 @@
         </div>
         
     <script>
-        function getTvTicker(yfTicker) {
-            // === 1. 特殊對照表 (手動維護常用 ETF 與指數) ===
-            const mapping = {
-                "QQQ": "NASDAQ:QQQ", "SPY": "AMEX:SPY", "DIA": "AMEX:DIA", "SMH": "NASDAQ:SMH",
-                "IWM": "AMEX:IWM", "VXX": "CBOE:VXX", "UVXY": "CBOE:UVXY", "SQQQ": "NASDAQ:SQQQ",
-                "TQQQ": "NASDAQ:TQQQ", "SOXL": "AMEX:SOXL", "SOXS": "AMEX:SOXS", "TLT": "NASDAQ:TLT",
-                "HYG": "AMEX:HYG", "EEM": "AMEX:EEM", "FXI": "AMEX:FXI", "EWY": "AMEX:EWY",
-                "EWZ": "AMEX:EWZ", "XLE": "AMEX:XLE", "XLF": "AMEX:XLF", "XLV": "AMEX:XLV",
-                "GDX": "AMEX:GDX", "SLV": "AMEX:SLV", "GLD": "AMEX:GLD", "USO": "AMEX:USO",
-                "IBIT": "NASDAQ:IBIT", "ARKK": "AMEX:ARKK", "TSM": "NYSE:TSM", "UMC": "NYSE:UMC",
-                "^HSI": "HSI:HSI", "^N225": "TVC:NI225", "^GSPC": "SP:SPX", "^IXIC": "TVC:IXIC", "3033": "HKEX:3033"
-            };
-
-            if (mapping[yfTicker]) return mapping[yfTicker];
-
-            // === 2. 規則轉換 ===
-
-            // 港股: 0700.HK -> HKEX:700 (移除前導0)
-            if (yfTicker.endsWith(".HK")) {
-                let code = yfTicker.replace(".HK", "");
-                return "HKEX:" + parseInt(code, 10);
-            }
-
-            // 加密貨幣: BTC-USD -> BINANCE:BTCUSDT
-            if (yfTicker.endsWith("-USD")) {
-                return "BINANCE:" + yfTicker.replace("-USD", "") + "USDT";
-            }
-
-            // 日股: 7203.T -> TSE:7203
-            if (yfTicker.endsWith(".T")) {
-                return "TSE:" + yfTicker.replace(".T", "");
-            }
-
-            // 預設: 直接使用代號 (TradingView 搜尋通常夠聰明)
-            return yfTicker;
-        }
-
-        function openTradingView(yfTicker) {
-            const tvTicker = getTvTicker(yfTicker);
-
-            // 偵測是否為行動裝置
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-            if (isMobile) {
-                // 手機上強制使用 App Scheme
-                // 格式: tradingview://chart?symbol=NASDAQ:NVDA
-                const appLink = `tradingview://chart?symbol=${tvTicker}`;
-                window.location.href = appLink;
-            } else {
-                // 電腦上使用網頁版
-                const webLink = `https://www.tradingview.com/chart/?symbol=${tvTicker}`;
-                window.open(webLink, '_blank');
-            }
-        }
-
-
-        function handleRowClick(row, event) {
-            const cells = row.getElementsByTagName("td");
-            if (cells.length === 0) return;
-
-            const ticker = cells[0].innerText.trim(); // 這是 Yahoo 格式
-
-            // 顯示詳情彈窗
-            const headers = document.querySelectorAll("th");
-            let contentHtml = "";
-            for (let i = 0; i < cells.length; i++) {
-                contentHtml += `<div class="detail-row"><span class="detail-label">${headers[i].innerText}</span><span class="detail-value">${cells[i].innerHTML}</span></div>`;
-            }
-
-            // 彈窗中的按鈕也要轉換
-            contentHtml += `<div style="margin-top:20px; text-align:center;">
-                <button onclick="openTradingView('${ticker}')" style="background:#40466e; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;">
-                    📈 在 TradingView 查看圖表
-                </button>
-            </div>`;
-
-            document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
-            document.getElementById("modalBody").innerHTML = contentHtml;
-            document.getElementById("detailModal").style.display = "block";
-        }
-
-        function closeModal() { document.getElementById("detailModal").style.display = "none"; }
-
-        // --- 修正開始: 支援 App Browser 的背景點擊關閉 ---
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = document.getElementById("detailModal");
-
-            const handleClose = function(e) {
-                // 檢查點擊目標是否正是背景遮罩 (modal)，而非內容 (modal-content)
-                if (e.target === modal) {
-                    // 如果是觸控結束事件，阻止默認行為以防觸發穿透點擊
-                    if (e.type === 'touchend') {
-                        e.preventDefault(); 
-                    }
-                    closeModal();
-                }
-            };
-
-            // 確保 modal 存在再綁定
-            if (modal) {
-                window.onclick = handleClose;
-                // 改用 addEventListener 以確保相容性，並綁定在 window 上
-                window.addEventListener('touchend', handleClose, { passive: false });
-            }
-        });
-        // --- 修正結束 ---
-
-
         function filterTable() {
             const input = document.getElementById("searchInput");
-            // 使用 value 屬性並轉大寫，並去除前後空白
-            const filter = input.value.toUpperCase().trim();
+            const filter = input.value.toUpperCase();
             const table = document.getElementById("stockTable");
             const tr = table.getElementsByTagName("tr");
-
-            // 使用 requestAnimationFrame 避免在大量資料時卡頓
-            window.requestAnimationFrame(() => {
-                for (let i = 1; i < tr.length; i++) {
-                    // 獲取整行的文字內容 (textContent 效能比 innerText 好)
-                    const textContent = tr[i].textContent || tr[i].innerText;
-
-                    if (filter === "") {
-                        tr[i].style.display = ""; // 搜尋框為空時顯示所有
-                    } else if (textContent.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            });
+            for (let i = 1; i < tr.length; i++) {
+                const td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    const txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = ""; else tr[i].style.display = "none";
+                }       
+            }
         }
-
+        function getTvTicker(yfTicker) {
+            const mapping = {
+                "QQQ": "NASDAQ:QQQ", "SPY": "AMEX:SPY", "DIA": "AMEX:DIA", "SMH": "NASDAQ:SMH", "IWM": "AMEX:IWM", "VXX": "CBOE:VXX",
+                "UVXY": "CBOE:UVXY", "SQQQ": "NASDAQ:SQQQ", "TQQQ": "NASDAQ:TQQQ", "SOXL": "AMEX:SOXL", "SOXS": "AMEX:SOXS",
+                "TLT": "NASDAQ:TLT", "HYG": "AMEX:HYG", "EEM": "AMEX:EEM", "FXI": "AMEX:FXI", "EWY": "AMEX:EWY", "EWZ": "AMEX:EWZ",
+                "XLE": "AMEX:XLE", "XLF": "AMEX:XLF", "XLV": "AMEX:XLV", "GDX": "AMEX:GDX", "SLV": "AMEX:SLV", "GLD": "AMEX:GLD",
+                "USO": "AMEX:USO", "IBIT": "NASDAQ:IBIT", "ARKK": "AMEX:ARKK", "TSM": "NYSE:TSM", "UMC": "NYSE:UMC",
+                "^HSI": "HSI:HSI", "^N225": "TVC:NI225", "^GSPC": "SP:SPX", "^IXIC": "TVC:IXIC", "3033.HK": "HKEX:3033"
+            };
+            if (mapping[yfTicker]) return mapping[yfTicker];
+            if (yfTicker.endsWith(".HK")) return "HKEX:" + parseInt(yfTicker.replace(".HK", ""), 10);
+            return yfTicker;
+        }
+        function openTradingView(yfTicker) {
+            const tvTicker = getTvTicker(yfTicker);
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const link = isMobile ? `tradingview://chart?symbol=${tvTicker}` : `https://www.tradingview.com/chart/?symbol=${tvTicker}`;
+            if(isMobile) window.location.href = link; else window.open(link, '_blank');
+        }
+        function embedTVChart(containerId, rawTicker) {
+            var container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = "";
+            var tvTicker = getTvTicker(rawTicker);
+            var script = document.createElement("script");
+            script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
+            script.type = "text/javascript";
+            script.async = true;
+            script.innerHTML = JSON.stringify({
+                "symbols": [[tvTicker, tvTicker]], "chartOnly": true, "width": "100%", "height": "100%", "locale": "zh_TW",
+                "colorTheme": "light", "autosize": true, "showVolume": false, "hideDateRanges": true, "dateRange": "6m",
+                "interval": "240", "scalePosition": "no", "scaleMode": "Normal", "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+                "noTimeScale": true, "valuesTracking": "1", "changeMode": "price-and-percent", "chartType": "candlestick",
+                "downColor": "#f33", "upColor": "#339"
+            });
+            container.appendChild(script);
+        }
+        function handleRowClick(row, event) {
+            try {
+                const cells = row.getElementsByTagName("td");
+                const ticker = cells[0].innerText.trim();
+                const isHK = ticker.endsWith(".HK");
+                const headers = document.querySelectorAll("th");
+                let contentHtml = "";
+                let chartImgData = "";
+                for (let i = 0; i < cells.length; i++) {
+                    const headerText = headers[i].innerText;
+                    if (headerText.includes("chart_img") || headerText === "chart_img") { chartImgData = cells[i].textContent.trim(); continue; }
+                    contentHtml += `<div class="detail-row"><span class="detail-label">${headerText}</span><span class="detail-value">${cells[i].innerHTML}</span></div>`;
+                }
+                if (isHK && chartImgData.length > 20) {
+                     contentHtml += `<div style="text-align:center; margin:15px 0;"><img src="${chartImgData}" style="width:90vw; max-width:100%; height:auto; border:1px solid #eee;"></div>`;
+                } else if (!isHK) {
+                     contentHtml += `<div id="tv-chart-container" style="width: 90vw; max-width: 100%; height: 350px; margin: 15px auto; overflow: hidden; border:1px solid #eee;">Loading...</div>`;
+                }
+                contentHtml += `<div style="margin-top:20px; text-align:center;"><button onclick="openTradingView('${ticker}')" style="background:#40466e; color:white; border:none; padding:10px 20px; border-radius:5px; font-size:16px; cursor:pointer;">📈 在 TradingView 查看圖表</button></div>`;
+                document.getElementById("modalTitle").innerText = cells[1].innerText + " (" + ticker + ")";
+                document.getElementById("modalBody").innerHTML = contentHtml;
+                document.getElementById("detailModal").style.display = "block";
+                if (!isHK) { setTimeout(function() { embedTVChart("tv-chart-container", ticker); }, 300); }
+            } catch(e) { console.error(e); }
+        }
+        function closeModal() { document.getElementById("detailModal").style.display = "none"; }
+        document.addEventListener('DOMContentLoaded', function() {
+             const searchInput = document.getElementById("searchInput");
+             if(searchInput) searchInput.addEventListener("keyup", filterTable);
+             const modal = document.getElementById("detailModal");
+             if(modal) {
+                 const handleClose = function(e) { if (e.target === modal) { if (e.type === 'touchend') e.preventDefault(); closeModal(); } };
+                 modal.addEventListener('click', handleClose);
+                 modal.addEventListener('touchend', handleClose);
+             }
+        });
     </script>
-    
+
     </body>
     </html>
     
